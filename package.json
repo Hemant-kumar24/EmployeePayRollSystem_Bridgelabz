@@ -1,0 +1,25 @@
+{
+  "name": "employeepayrollsystem-bridgelabz",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemant-kumar24/EmployeePayRollSystem_Bridgelabz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemant-kumar24/EmployeePayRollSystem_Bridgelabz/issues"
+  },
+  "homepage": "https://github.com/Hemant-kumar24/EmployeePayRollSystem_Bridgelabz#readme",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "epress": "^0.0.1-security",
+    "express": "^5.2.1"
+  }
+}

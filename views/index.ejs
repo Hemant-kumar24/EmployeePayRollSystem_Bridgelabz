@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Left -->
+        <div class="logo">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </div>
+
+        <!-- Center Search -->
+        <div class="search-box">
+            <input type="text" placeholder="Search employee...">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <!-- Right -->
+        <div class="nav-right">
+            
+            
+           <a href="/addEmployee"> <button class="add">ADD Employee</button></a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- 6 Data Boxes -->
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-users icon blue"></i>
+                <h3>Total Employees</h3>
+                <p><%=filedata.length%></p>
+            </div>
+<!-- 
+            <div class="card">
+                <i class="fa-solid fa-user-check icon green"></i>
+                <h3>Active</h3>
+                <p>98</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-xmark icon red"></i>
+                <h3>Inactive</h3>
+                <p>22</p>
+            </div> -->
+
+            <div class="card">
+                <i class="fa-solid fa-building icon purple"></i>
+                <h3>Departments</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-plus icon orange"></i>
+                <h3>New Joinees</h3>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-calendar-check icon teal"></i>
+                <h3>On Leave</h3>
+                <p>6</p>
+            </div>
+
+        </div>
+
+        <!-- Employee Table -->
+        <div class="table-section">
+            <h2>Employee List</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th></th>
+                            <th>Basic Salary</th>
+                            <th>12% Tax</th>
+                            <th>Net Salary</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% filedata.forEach((employee) => { %>
+                            
+                        <tr>
+                            <td><%=employee.ID %></td>
+                            <td><%=employee.Name %></td>
+                            <td><%=employee.Email %></td>
+                            <td><%=employee.Department%></td>
+                            <td><%=employee.Basic_Salary %></td>
+                            <td><%=employee.Tax %></td>
+                            <td><%=employee.Net_Salary %></td>
+                        </tr>
+                        <% }); %>
+<!-- 
+                        <tr>
+                            <td>102</td>
+                            <td>Sarah Smith</td>
+                            <td>sarah@example.com</td>
+                            <td>HR</td>
+                            <td>Manager</td>
+                            <td class="status inactive">Inactive</td>
+                        </tr>
+
+                        <tr>
+                            <td>103</td>
+                            <td>Michael Lee</td>
+                            <td>michael@example.com</td>
+                            <td>Finance</td>
+                            <td>Analyst</td>
+                            <td class="status active">Active</td>
+                        </tr> -->
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,12 +1,13 @@
-const fs=require('fs')
-function readFile(){
-    const file=fs.readFile("Modules/employees.json","utf-8",(err,data)=>{
-        if(err){
-            console.log(err)
-        }
-        else{
-            console.log(data)
-        }
-    })
+const fs=require('fs').promises
+async function readFile(){
+    try{
+        const data= await fs.readFile("Modules/employees.json","utf-8");
+        return JSON.parse(data);
+    }
+    catch(err){
+        console.log(err)
+    }
+
+    
 }
 module.exports=readFile;

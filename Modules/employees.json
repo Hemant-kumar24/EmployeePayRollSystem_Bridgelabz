@@ -1,6 +1,13 @@
 [
     {
-        "Emp_ID":"001",
-        "Emp_Name":"Hemant Kumar"
+        "ID":"001",
+        "Name":"Hemant Kumar",
+        "Email":"Hemant.kumar23@gmail.com",
+        "Department":"IT",
+        "Basic_Salary":"20000",
+        "Tax":"2400",
+        "Net_Salary":"17600"
+
     }
+    
 ]

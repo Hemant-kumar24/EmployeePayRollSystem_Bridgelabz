@@ -86,6 +86,31 @@
     cursor: pointer;
 
 }
+.btn {
+    padding: 6px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #28a745;
+}
+
+.edit-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
 
 
 

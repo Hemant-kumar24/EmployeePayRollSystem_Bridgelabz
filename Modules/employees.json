@@ -1,13 +1,30 @@
 [
-    {
-        "ID":"001",
-        "Name":"Hemant Kumar",
-        "Email":"Hemant.kumar23@gmail.com",
-        "Department":"IT",
-        "Basic_Salary":"20000",
-        "Tax":"2400",
-        "Net_Salary":"17600"
-
-    }
-    
+  {
+    "ID": "001",
+    "Name": "Hemant Kumar",
+    "Email": "Hemant.kumar23@gmail.com",
+    "Department": "IT",
+    "Basic_Salary": "20000"
+  },
+  {
+    "ID": "00023",
+    "Name": "bhavtosh",
+    "Email": "ha@gmail.com",
+    "Department": "IT",
+    "Basic_Salary": 3445
+  },
+  {
+    "ID": "00023",
+    "Name": "bhavtosh",
+    "Email": "ha@gmail.com",
+    "Department": "IT",
+    "Basic_Salary": 3445
+  },
+  {
+    "ID": "jjhuuuy584",
+    "Name": "hhsbsjsh",
+    "Email": "bsbs@mail.com",
+    "Department": "mechanical23",
+    "Basic_Salary": 256543
+  }
 ]

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Employee Dashboard</title>
@@ -11,6 +12,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-100">
 
     <!-- Navbar -->
@@ -29,9 +31,9 @@
 
         <!-- Right -->
         <div class="nav-right">
-            
-            
-           <a href="/addEmployee"> <button class="add">ADD Employee</button></a>
+
+
+            <a href="/addEmployee"> <button class="add">ADD Employee</button></a>
         </div>
     </nav>
 
@@ -44,9 +46,11 @@
             <div class="card">
                 <i class="fa-solid fa-users icon blue"></i>
                 <h3>Total Employees</h3>
-                <p><%=filedata.length%></p>
+                <p>
+                    <%=filedata.length%>
+                </p>
             </div>
-<!-- 
+            <!-- 
             <div class="card">
                 <i class="fa-solid fa-user-check icon green"></i>
                 <h3>Active</h3>
@@ -90,44 +94,59 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Department</th></th>
+                            <th>Department</th>
+                            </th>
                             <th>Basic Salary</th>
                             <th>12% Tax</th>
                             <th>Net Salary</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <% filedata.forEach((employee) => { %>
-                            
-                        <tr>
-                            <td><%=employee.ID %></td>
-                            <td><%=employee.Name %></td>
-                            <td><%=employee.Email %></td>
-                            <td><%=employee.Department%></td>
-                            <td><%=employee.Basic_Salary %></td>
-                            <td><%=employee.Tax %></td>
-                            <td><%=employee.Net_Salary %></td>
-                        </tr>
-                        <% }); %>
-<!-- 
-                        <tr>
-                            <td>102</td>
-                            <td>Sarah Smith</td>
-                            <td>sarah@example.com</td>
-                            <td>HR</td>
-                            <td>Manager</td>
-                            <td class="status inactive">Inactive</td>
-                        </tr>
+                        <% filedata.forEach((employee)=> {
+                            let tax=employee.Basic_Salary*0.12;
+                            let net_salary=employee.Basic_Salary-tax;
 
-                        <tr>
-                            <td>103</td>
-                            <td>Michael Lee</td>
-                            <td>michael@example.com</td>
-                            <td>Finance</td>
-                            <td>Analyst</td>
-                            <td class="status active">Active</td>
-                        </tr> -->
+                            %>
+
+                            <tr>
+                                <td>
+                                    <%=employee.ID %>
+                                </td>
+                                <td>
+                                    <%=employee.Name %>
+                                </td>
+                                <td>
+                                    <%=employee.Email %>
+                                </td>
+                                <td>
+                                    <%=employee.Department%>
+                                </td>
+                                <td>
+                                    <%=employee.Basic_Salary %>
+                                </td>
+                                <td>
+                                    <%=tax%>
+                                </td>
+                                <td>
+                                    <%=net_salary %>
+                                </td>
+                                <td>
+                                    <!-- Edit Button -->
+                                    <a href="/edit/<%= employee.ID %>" class="btn edit-btn">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+
+                                    <!-- Delete Button -->
+                                    <a href="/delete/<%= employee.ID %>" class="btn delete-btn"
+                                        onclick="return confirm('Are you sure you want to delete this employee?')">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }); %>
+
                     </tbody>
 
                 </table>
@@ -137,4 +156,5 @@
     </div>
 
 </body>
+
 </html>

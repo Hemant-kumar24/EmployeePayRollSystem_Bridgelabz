@@ -24,10 +24,22 @@
         </div>
 
         <!-- Center Search -->
-        <div class="search-box">
-            <input type="text" placeholder="Search employee...">
-            <button><i class="fa fa-search"></i></button>
+       <div class="search-box">
+    <form action="/" method="GET">
+        <div class="internal-search-box">
+        <input 
+            type="text" 
+            name="search"
+            placeholder="Search employee..."
+            >
+
+        <button type="submit">
+            <i class="fa fa-search"></i>
+        </button>
         </div>
+    </form>
+</div>
+
 
         <!-- Right -->
         <div class="nav-right">
@@ -104,6 +116,16 @@
                     </thead>
 
                     <tbody>
+                        <% if(filedata.length==0) { %>
+                             <tr>
+            <td colspan="8" style="text-align:center; padding:20px; font-size:18px; font-weight:bold;">
+                No Employees Found
+            </td>
+        </tr>
+                       
+                        <% }else  { %>
+
+
                         <% filedata.forEach((employee)=> {
                             let tax=employee.Basic_Salary*0.12;
                             let net_salary=employee.Basic_Salary-tax;
@@ -146,6 +168,8 @@
                                 </td>
                             </tr>
                             <% }); %>
+
+                            <% }%>
 
                     </tbody>
 

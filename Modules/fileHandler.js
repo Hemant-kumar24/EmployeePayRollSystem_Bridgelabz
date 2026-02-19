@@ -1,4 +1,4 @@
-const { write } = require('fs');
+
 
 const fs=require('fs').promises
 async function readfile(){
